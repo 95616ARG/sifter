@@ -1,0 +1,6 @@
+assert(k > 5);
+int AB_rowcol = k;
+int inner = k * k;
+read_mat(AB_rowcol, inner, &A);
+read_mat(inner, AB_rowcol, &B);
+gemm_large(A, B, &C, AB_rowcol, inner, AB_rowcol);

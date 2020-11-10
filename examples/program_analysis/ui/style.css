@@ -1,0 +1,35 @@
+body {
+    vertical-align: top;
+    min-height: 1500px;
+}
+
+.document {
+    white-space: pre;
+    line-height: 1.5em;
+    font-family: mono;
+    font-size: 0.95em;
+    position: relative;
+    border: 3px solid red;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 5px;
+    vertical-align: top;
+}
+    .chunk-in-structure {
+        border: 3px solid gray;
+    }
+    .chunk-in-map {
+        border: 3px solid green;
+    }
+    .highlight {
+        background-color: green;
+    }
+.document.generated {
+    border-color: blue;
+}
+    .document.generated .chunk-in-map {
+        border-color: blue;
+    }
+    .document.generated .highlight {
+        background-color: blue;
+    }

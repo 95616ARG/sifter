@@ -1,0 +1,9 @@
+# CameraLib v1.0
+### `cam_record_video(buffer, buffer_size, resolution)`
+Records video from the main camera into `buffer` until `buffer_size` bytes are reached. On error returns -1.
+
+### `cam_record_audio(buffer, buffer_size, resolution)`
+Uses the main camera's microphone to record audio into `buffer` until `buffer_size` bytes have been recorded. On error returns -5.
+
+### `cam_record_frame(buffer, buffer_size, resolution)`
+Uses the main camera to record a single image to `buffer`. Automatically sets the resolution to fit in `buffer_size`. On failure returns -3.

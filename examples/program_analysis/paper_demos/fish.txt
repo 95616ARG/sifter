@@ -1,0 +1,13 @@
+int builtin_cd(parser_t &parser, io_streams_t &streams, wchar_t **argv) { /*@\color{red}{//F1} @*/
+    const wchar_t *cmd = argv[0];
+    int argc = builtin_count_args(argv);
+...
+
+static const builtin_data_t builtin_datas[] = {
+...
+    {L"cd", &builtin_cd, ...}, /*@\color{red}{//F2} @*/
+...
+
+static const builtin_data_t *builtin_lookup(const wcstring &name) { /*@\color{red}{//F3} @*/
+    const builtin_data_t *array_end = builtin_datas + BUILTIN_COUNT;
+...
