@@ -1,0 +1,6 @@
+assert(k > 0);
+int outer = k * 10;
+int inner = k * 10;
+read_mat(outer, inner, &A);
+read_mat(inner, outer, &B);
+gemm_large(A, B, &C);

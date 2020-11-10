@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include "cam.h"
+
+#define BUFFER_SIZE (1024 * 1024)
+char buffer[BUFFER_SIZE];
+
+void try_record_video() {
+    int result = cam_record_video(buffer, BUFFER_SIZE);
+    if (result == -4) {
+        printf("Could not record video.\n");
+    } else {
+        printf("Recording video worked!\n");
+    }
+}

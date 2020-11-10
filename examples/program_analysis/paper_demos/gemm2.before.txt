@@ -1,0 +1,10 @@
+assert(k > 1);
+int outer = k, A_cols = k / 2;
+read_mat(outer, A_cols, &A);
+read_mat(A_cols, outer, &B);
+while (!done(A, B)) {
+    read_row(&A);
+    read_col(&B);
+    outer++;
+}
+gemm_large(A, B, &C, outer, A_cols, outer);

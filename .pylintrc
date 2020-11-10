@@ -1,0 +1,11 @@
+[BASIC]
+
+# Good variable names which should always be accepted, separated by a comma
+good-names=ts,rt,i,j,k,ex,Run,_
+
+# Allow different function names as long as consistent within a module (see
+# README).
+# See https://docs.pylint.org/en/1.6.0/options.html#multiple-naming-styles
+function-rgx=(?:(?P<snake>[a-z_][a-z0-9_]{2,30})|(?P<camel>(_?([A-Z]|[a-z])*){2,30}))$
+
+method-rgx=(?:(?P<snake>[a-z_][a-z0-9_]{2,30})|(?P<camel>(_?([A-Z]|[a-z])*){2,30}))$

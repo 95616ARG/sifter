@@ -1,0 +1,17 @@
+int cd_builtin (list) WORD_LIST *list; /*@\color{red}{//B1} @*/
+{
+  char *dirname, *cdpath, *path, *temp;
+...
+
+struct builtin static_shell_builtins[] = {
+...
+  { "cd", cd_builtin, ... }, /*@\color{red}{//B2} @*/
+...
+struct builtin *shell_builtins = static_shell_builtins; /*@\color{red}{//B3} @*/
+
+struct builtin * builtin_address_internal
+    (name, disabled_okay)
+    char *name; int disabled_okay; { /*@\color{red}{//B4} @*/
+...
+      j = shell_builtins[mid].name[0] - name[0];
+...

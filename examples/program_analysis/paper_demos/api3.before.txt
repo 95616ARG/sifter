@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include "cam.h"
+
+#define BUFFER_SIZE (1024)
+char buffer[BUFFER_SIZE];
+
+void try_record_still() {
+    int result = cam_record_frame(buffer, BUFFER_SIZE, RES_AUTO);
+    if (result == -3) {
+        printf("Could not record audio.\n");
+    } else {
+        printf("Recorded audio!\n");
+    }
+}
